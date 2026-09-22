@@ -1,0 +1,9 @@
+Age,Study_Hours,Attendance,Department,Passed
+21,2.0,78,AI,Yes
+22,3.5,85,CSE,Yes
+23,4.0,91,AI,Yes
+24,5.0,88,ECE,Yes
+25,,72,CSE,No
+26,6.0,95,AI,Yes
+27,4.5,90,ECE,Yes
+28,3.0,80,CSE,No
