@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Model training utilities
 
 =======
@@ -69,4 +69,4 @@ def train_models(models, X_train, y_train):
             training_errors[name] = str(exc)
 
     return trained_models, training_errors
->>>>>>> 85d9c89 (Update DataPilot AI through Step 12)
+
