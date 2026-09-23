@@ -4,6 +4,10 @@
 
 **DataPilot AI** is an end-to-end machine-learning application that turns a CSV dataset into an automated analysis and model-comparison workflow. A Streamlit frontend sends data to a FastAPI backend, which detects the prediction problem, preprocesses features, trains multiple models, evaluates them, and returns the results.
 
+## Demo
+
+![DataPilot AI Demo](datapilot-ai-demo.png)
+
 ## Why this project
 
 Data science workflows often require repetitive setup before model experimentation can begin. DataPilot AI reduces that friction by automating common steps such as dataset inspection, target selection, problem-type detection, preprocessing, model training, and metric comparison behind a simple web interface.
