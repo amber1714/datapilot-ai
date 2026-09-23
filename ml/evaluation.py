@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Model evaluation utilities
 
 =======
@@ -218,4 +218,4 @@ def get_regression_predictions(model, X_test, y_test):
     )
 
     return result
->>>>>>> 85d9c89 (Update DataPilot AI through Step 12)
+
