@@ -1,8 +1,5 @@
 ml/training.py
 
-# Model training utilities
-
-=======
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.linear_model import LinearRegression, LogisticRegression
 
