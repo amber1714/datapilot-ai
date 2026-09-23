@@ -1,3 +1,4 @@
+api/main.py
 
 # DataPilot AI - FastAPI backend
 
