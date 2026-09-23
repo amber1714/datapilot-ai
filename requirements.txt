@@ -7,9 +7,6 @@ uvicorn
 python-multipart
 requests
 xgboost
-<<<<<<< HEAD
-=======
 matplotlib
 optuna
 joblib
->>>>>>> 85d9c89 (Update DataPilot AI through Step 12)
