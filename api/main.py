@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # DataPilot AI - FastAPI backend
 
 =======
@@ -355,4 +355,4 @@ async def train_models_endpoint(
             )
         ),
     }
->>>>>>> 85d9c89 (Update DataPilot AI through Step 12)
+
