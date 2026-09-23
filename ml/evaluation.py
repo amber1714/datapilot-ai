@@ -1,7 +1,5 @@
 ml/evaluation.py
-# Model evaluation utilities
 
-=======
 import math
 
 import numpy as np
