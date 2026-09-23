@@ -1,8 +1,4 @@
 api/main.py
-
-# DataPilot AI - FastAPI backend
-
-=======
 import io
 
 import pandas as pd
