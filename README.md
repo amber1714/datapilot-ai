@@ -8,6 +8,10 @@
 
 ![DataPilot AI Demo](datapilot-ai-demo.png)
 
+### Live Demo
+
+[Open DataPilot AI](https://datapilot-ai-apqmxbl39yklcfcuy23fet.streamlit.app/)
+
 ## Why this project
 
 Data science workflows often require repetitive setup before model experimentation can begin. DataPilot AI reduces that friction by automating common steps such as dataset inspection, target selection, problem-type detection, preprocessing, model training, and metric comparison behind a simple web interface.
