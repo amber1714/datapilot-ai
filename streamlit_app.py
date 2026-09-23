@@ -14,6 +14,7 @@ from services.api_client import (
 
 st.set_page_config(
     page_title="DataPilot AI",
+    page_icon="📊",
     layout="wide",
 )
 
@@ -24,11 +25,11 @@ API_URL = os.getenv(
 
 st.title("DataPilot AI")
 st.caption(
-    "Step 10 — Streamlit frontend connected to FastAPI backend"
+    "Autonomous data science assistant for dataset analysis and machine-learning model comparison."
 )
 
 with st.sidebar:
-    st.subheader("Backend")
+    st.subheader("API Status")
 
     st.code(API_URL)
 
@@ -48,8 +49,7 @@ uploaded_file = st.file_uploader(
 
 if uploaded_file is None:
     st.info(
-        "Upload a CSV file to begin. "
-        "Keep the FastAPI backend running on port 8000."
+        "Upload a CSV file to begin. DataPilot will analyze it through the FastAPI backend."
     )
     st.stop()
 
@@ -57,7 +57,7 @@ file_bytes = uploaded_file.getvalue()
 file_name = uploaded_file.name
 
 st.divider()
-st.subheader("1. Dataset Analysis")
+st.subheader("1. Analyze Dataset")
 
 try:
     analysis = analyze_dataset(
@@ -70,7 +70,7 @@ except DataPilotAPIError as exc:
     st.stop()
 
 st.success(
-    "Dataset analyzed through the FastAPI backend."
+    "Dataset analyzed successfully."
 )
 
 metric_1, metric_2, metric_3, metric_4 = st.columns(4)
@@ -124,7 +124,7 @@ column_names = [
 ]
 
 st.divider()
-st.subheader("2. Select Target")
+st.subheader("2. Choose Prediction Target")
 
 target_column = st.selectbox(
     "Choose the column you want to predict",
@@ -168,7 +168,7 @@ detect_3.metric(
 )
 
 st.divider()
-st.subheader("3. Train Models Through FastAPI")
+st.subheader("3. Train & Compare Models")
 
 test_size = st.slider(
     "Test set size",
@@ -179,11 +179,11 @@ test_size = st.slider(
 )
 
 if st.button(
-    "Train Models via API",
+    "Train & Compare Models",
     type="primary",
 ):
     with st.spinner(
-        "Sending dataset to FastAPI and training models..."
+        "Training and comparing machine-learning models..."
     ):
         try:
             training = train_models(
@@ -198,7 +198,7 @@ if st.button(
             st.stop()
 
     st.success(
-        "Training completed through the FastAPI backend."
+        "Training completed successfully."
     )
 
     result_1, result_2, result_3 = st.columns(3)
@@ -280,25 +280,24 @@ if st.button(
     )
 
     st.success(
-        "Step 10 complete: Streamlit is now "
-        "communicating with FastAPI over HTTP."
+        "Model comparison complete. Download the results or try another target column."
     )
 
 st.divider()
 
 with st.expander(
-    "How Step 10 works"
+    "System Architecture"
 ):
     st.code(
         """
 Browser
    |
    v
-Streamlit :8501
+Streamlit frontend
    |
-   | HTTP POST requests
+   | HTTPS requests
    v
-FastAPI :8000
+FastAPI backend
    |
    v
 Preprocessing + ML models
